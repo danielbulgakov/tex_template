@@ -1,0 +1,192 @@
+% =============================================================================
+% Compile parameters
+% =============================================================================
+
+\documentclass[12pt, russian]{extarticle}
+\usepackage[T2A]{fontenc}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
+\usepackage[a4paper,
+left=25mm,
+right=15mm,
+top=20mm,
+bottom=20mm]{geometry}
+\usepackage[linktoc=all]{hyperref}
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+\usepackage{tocloft}
+
+% Remove \bfseries from section titles in ToC
+\renewcommand{\cftsecfont}{}
+% Remove \bfseries from section titles' page in ToC
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\cftsecaftersnum}{.}
+\usepackage{titlesec}
+
+% Change font size for types
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.4cm}
+\font\subtitlefont=cmr12 at 12pt
+\font\titlefont=cmr12 at 24pt
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[russian]{babel}
+\usepackage{setspace}
+\setlength{\marginparwidth}{2cm}
+\usepackage{todonotes}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usetikzlibrary{shapes, arrows, positioning}
+\renewcommand{\contentsname}{}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\graphicspath{ {./resources/} }
+
+\usepackage{listings}
+\usepackage{float}
+
+\lstset{
+    numbers=left,                   % where to put the line-numbers
+    numberstyle=\small \ttfamily \color[rgb]{0.4,0.4,0.4},
+                % style used for the linenumbers
+    showspaces=false,               % show spaces adding special underscores
+    showstringspaces=false,         % underline spaces within strings
+    showtabs=false,                 % show tabs within strings adding particular underscores
+    frame=lines,                    % add a frame around the code
+    tabsize=4,                        % default tabsize: 4 spaces
+    breaklines=true,                % automatic line breaking
+    breakatwhitespace=false,        % automatic breaks should only happen at whitespace
+    basicstyle=\ttfamily,
+    %identifierstyle=\color[rgb]{0.3,0.133,0.133},   % colors in variables and function names, if desired.
+    keywordstyle=\color[rgb]{0.133,0.133,0.6},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+% =============================================================================
+% Useful 
+% =============================================================================
+
+% insert code
+% \lstinputlisting[language=Python]{./resources/classification.py}
+
+
+% insert image
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.6]{resources/2.png}
+% \end{figure}
+
+% =============================================================================
+% End of compile parameters
+% =============================================================================
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+% =============================================================================
+% Global titlepage
+% =============================================================================
+
+\begin{titlepage}
+
+    \begin{center}
+        МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \\
+        Федеральное государственное автономное образовательное учреждение \\
+        высшего образования \\
+        \textbf{
+            «Национальный исследовательский \\
+            Нижегородский государственный университет им. Н.И. Лобачевского»\\ (ННГУ)
+        }
+    \bigbreak
+
+    \vspace{2em}
+        \textbf{
+            Институт информационных технологий, математики и механики
+            \bigbreak
+            Кафедра математического обеспечения и суперкомпьютерных технологий
+        }
+
+        Направление подготовки: «Программная инженерия» \\
+        Профиль подготовки: «Технологии цифровой трансформации»
+
+        \bigbreak
+        \bigbreak
+        \bigbreak
+
+        \textbf{ОТЧЕТ} \\
+        по ознакомительной практике
+        \bigbreak
+
+        на тему \\
+        {\bfseries ``Решение задачи классификации с использованием методов машинного обучения''}
+    \end{center}
+
+    \vspace{5em}
+
+    \begin{flushright}
+        {\bfseries Выполнил:} студент группы \\ 3824М1ПР1 Д.Э. Булгаков\\
+        \hfill Подпись \hspace{5em} \newline \\
+        {\bfseries Проверил:} \\доцент кафедры МОСТ, к.т.н.,\\ Н.А. Борисов \\
+        \hfill Подпись \hspace{5em} \newline \\
+    \end{flushright}
+
+
+    \vspace{\fill}
+
+    \begin{center}
+        Нижний Новгород\\2024
+    \end{center}
+
+\end{titlepage}
+
+% =============================================================================
+% Main content
+% =============================================================================
+
+% ========== Set global spacing ==========
+\begin{spacing}{1.5}
+
+% ========== Table of content ==========
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+% Params to make the following text start with
+% its page number
+\pagestyle{plain}
+\setcounter{page}{3}
+
+
+\section{Введение}
+
+\newpage
+\section{Постановка задачи}
+
+
+\newpage
+\section{Проведенная работа}
+
+
+\newpage
+\section{Выводы}
+
+\newpage
+\section{Список литературы}
+
+\end{spacing}
+\end{document}
